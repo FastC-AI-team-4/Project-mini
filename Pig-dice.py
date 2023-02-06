@@ -37,10 +37,13 @@ def pig_dice(max_score):
                 temp_score = 0
                 # 다음사람으로 넘어가는 기능
                 current_player = next_player(current_player)
+        return current_player
 
 
 def next_player(current_player):
     return "player2" if current_player == "player1" else "player1"
 
 
-pig_dice(100)
+max_score = 100
+winner = pig_dice(max_score)
+print(f"winner is  {winner}")
